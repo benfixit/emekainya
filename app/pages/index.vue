@@ -1,4 +1,5 @@
-<script></script>
 <template>
-    <h1>Home Page</h1>
+  <div>
+   <h1>Welcome to the homepage</h1>
+  </div>
 </template>
