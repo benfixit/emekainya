@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 
   content: {
     experimental: {
-      sqliteConnector: 'better-sqlite3'
+      sqliteConnector: 'native'
     }
   }
 })
