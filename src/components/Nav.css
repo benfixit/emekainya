@@ -3,6 +3,7 @@ nav {
     flex: 1;
     justify-content: space-between;
     align-items: center;
+    min-height: 100px;
 
     h1 {
         font-size: 24px;
