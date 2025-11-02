@@ -1,11 +1,23 @@
-import './App.css'
-import { Home } from './pages/Home'
+import { BrowserRouter, Routes, Route } from "react-router";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Blog from "./pages/Blog";
+import Projects from "./pages/Projects";
+import Resume from "./pages/Resume";
+import "./App.css";
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<Home />}></Route>
+            <Route path="blog" element={<Blog />}></Route>
+            <Route path="projects" element={<Projects />}></Route>
+            <Route path="resume" element={<Resume />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
   )
 }
 
