@@ -32,7 +32,8 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #808080;
+  color: #96D7DA;
+  /* color: #808080; */
 }
 
 h1 {

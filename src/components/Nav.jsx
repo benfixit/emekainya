@@ -5,7 +5,9 @@ const Nav = () => {
     return (
         <nav>
             <h1>
-                <NavLink to={"/"}>Chukwuemeka Inya</NavLink>
+                <span className="ball"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <NavLink to={"/"}>Chukwuemeka Inya</NavLink>&nbsp;&nbsp;<span className="divider">|</span>&nbsp;&nbsp;
+                <span className="title">Software Engineer</span>
             </h1>
             <ul>
                 <NavLink to={"/blog"}>Blog</NavLink>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import rehypeRaw from 'rehype-raw'
+import remarkFrontmatter from "remark-frontmatter";
 
 import "./Resume.css";
 
@@ -12,6 +13,8 @@ const Resume = () => {
             const response = await fetch(resumeFile.default);
             
             const data = await response.text();
+
+            console.log("Data ::: ", data);
             
             setContent(data);
         }
@@ -21,7 +24,7 @@ const Resume = () => {
 
     return (
         <div className="wrapper">
-            <Markdown rehypePlugins={[rehypeRaw]}>{content}</Markdown>
+            <Markdown rehypePlugins={[rehypeRaw, remarkFrontmatter]}>{content}</Markdown>
         </div>
     );
 }
