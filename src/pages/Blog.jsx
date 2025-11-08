@@ -1,29 +1,50 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router";
+import frontmatter from "frontmatter";
+import { getNWords } from "../utils/string";
 import "./Blog.css";
 
-const items = [
-    {
-        id: 1,
-        title: "First article",
-        content: "Hello World content"
-    },
-    {
-        id: 2,
-        title: "Second article",
-        content: "Hello World content"
-    },
-    {
-        id: 3,
-        title: "Third article",
-        content: "Hello World content"
-    }
-];
+
 const Blog = () => {
+    const [files, setFiles] = useState([]);
+    const [frontmatters, setFrontmatters] = useState([]);
+
+    useEffect(() => {
+        const fetchFiles = async () => {
+            const blogFiles = await import("../utils/blogFiles.json");
+
+            setFiles(blogFiles.default);
+        }
+
+        fetchFiles();
+
+        const fetchFrontmatters = async () => {
+            const requests = files.map(async file => {
+                const imp = await import(`../content/blog/${file}.md`);
+
+                const res = await fetch(imp.default);
+                const body = await res.text();
+
+                const { data, content } = frontmatter(body);
+                const description = getNWords(content, 40);
+                
+                return {data, description, path: file};
+            });
+
+            const frontmatters = await Promise.all(requests);
+
+            setFrontmatters(frontmatters);
+        }
+
+        fetchFrontmatters();
+    }, [files]);
+
     return (
         <section className="blogs">
-            {items.map(item => (
-                <div key={item.id}>
-                    <h3>{item.title}</h3>
-                    <p>{item.content}</p>
+            {frontmatters.map((item, index) => (
+                <div key={index}>
+                    <Link to={`/blog/${item.path}`}>{item.data.title}</Link>
+                    <p>{item.description}...</p>
                 </div>
             ))}
         </section>

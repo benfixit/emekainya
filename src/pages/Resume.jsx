@@ -13,8 +13,6 @@ const Resume = () => {
             const response = await fetch(resumeFile.default);
             
             const data = await response.text();
-
-            console.log("Data ::: ", data);
             
             setContent(data);
         }
