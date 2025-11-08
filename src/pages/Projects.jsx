@@ -3,32 +3,30 @@ import "./Projects.css";
 const items = [
     {
         id: 1,
-        title: "First article",
-        content: "Hello World content"
+        title: "Markdown Editor",
+        description: "Markdown editor with preview using React JS",
+        link: "https://github.com/benfixit/markdown-editor"
     },
     {
         id: 2,
-        title: "Second article",
-        content: "Hello World content"
+        title: "Chat app",
+        description: "A chat app built using React, Express and Socket.io",
+        link: "https://github.com/benfixit/chat-app"
     },
     {
         id: 3,
-        title: "Third article",
-        content: "Hello World content"
-    },
-    {
-        id: 4,
-        title: "Fourth article",
-        content: "Hello World content"
+        title: "Igbo names",
+        description: "A repository for Igbo names",
+        link: "https://github.com/benfixit/igbonames"
     }
 ];
 const Projects = () => {
     return (
         <section className="projects">
-            {items.map(item => (
-                <div key={item.id}>
-                    <h3>{item.title}</h3>
-                    <p>{item.content}</p>
+            {items.map((item, index) => (
+                <div key={index}>
+                    <a href={`${item.link}`}>{item.title}</a>
+                    <p>{item.description}...</p>
                 </div>
             ))}
         </section>
