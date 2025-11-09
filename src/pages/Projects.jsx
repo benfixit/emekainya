@@ -25,7 +25,7 @@ const Projects = () => {
         <section className="projects">
             {items.map((item, index) => (
                 <div key={index}>
-                    <a href={`${item.link}`}>{item.title}</a>
+                    <a href={`${item.link}`} target="_blank">{item.title}</a>
                     <p>{item.description}...</p>
                 </div>
             ))}
