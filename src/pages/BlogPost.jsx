@@ -7,6 +7,7 @@ import "./Blog.css";
 
 const BlogPost = () => {
     const [content, setContent] = useState("");
+    const [title, setTitle] = useState("");
     const { slug } = useParams();
 
     useEffect(() => {
@@ -16,8 +17,9 @@ const BlogPost = () => {
             const res = await fetch(file.default);
             const body = await res.text();
 
-            const { content } = frontmatter(body);
-            
+            const { data, content } = frontmatter(body);
+
+            setTitle(data.title);
             setContent(content);
         }
 
@@ -26,6 +28,7 @@ const BlogPost = () => {
 
     return (
         <div className="blogPost">
+            <h2>{title}</h2>
             <Markdown>{content}</Markdown>
         </div>
     );

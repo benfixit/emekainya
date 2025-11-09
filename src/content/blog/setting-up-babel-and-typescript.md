@@ -6,7 +6,7 @@ Typescript has it's own compiler but there are times when you might want to use 
 
 For us to achieve this, we would make use of Babel's typescript preset, `@babel/preset-typescript`.
 
-##Installing Packages
+## Installing Packages
 Let's start by setting up our project and adding typescript as a dependency.
 
 ```
@@ -29,10 +29,10 @@ The `-D` flag lets us add the packages as dev dependencies. Dev dependencies are
 
 `@babel/preset-typescript` - This strips out the types from our typescript code and lets Babel compile it as regular javascript.
 
-##Configuration
+## Configuration
 Next, we need to configure babel and typescript. We will configure Babel so that it can compile our typescript file to Javascript. We will then configure Typescript in such a way that it only checks the typings in our code.
 
-###Configure Babel
+### Configure Babel
 Here, we will tell Babel to use the presets we installed in the previous section to transform our code.
 
 Create a babel config file `babel.config.json` in the root directory of your project and insert the following content.
@@ -43,7 +43,7 @@ Create a babel config file `babel.config.json` in the root directory of your pro
 }
 ```
 
-###Configuring Typescript
+### Configuring Typescript
 Here we will tell Typescript to only check the types in our code and not to compile any files. Babel will handle the compilation for us.
 
 Create a typescript config file `tsconfig.json` in the root directory of your project and insert the following content.
@@ -55,18 +55,18 @@ Create a typescript config file `tsconfig.json` in the root directory of your pr
 }
 ```
 
-##Testing what you've built
-###Type checking by TSC
+## Testing what you've built
+### Type checking by TSC
 While writing your code, you will get realtime type-checking by tsc.
 
-###Compiling with Babel
+### Compiling with Babel
 You can then compile your code with Babel by running the following code on your command line.
 ```
 node_modules/.bin/babel src --out-dir lib --extensions ".ts"
 ```
 The command above tells Babel which we installed to compile every Typescript file in the `/src` folder into regular Javascript and output them in the `/lib` folder. If your typescript files are located in a different folder, just replace `src` with the location of the source files you wish to transform.
 
-###Auto-compiling with scripts
+### Auto-compiling with scripts
 We can setup some npm scripts to help us watch and compile our files with Babel every time we make changes to them. By doing so, we do not always have to run Babel on the command line ourselves anytime we make a change.
 
 In your `package.json` file, add the following lines of code in the script tag.
@@ -80,7 +80,7 @@ Now, we can run `yarn run watch`, make changes to our code and see the compiled 
 
 Here is the [github repository](https://github.com/benfixit/babel-typescript) of the code.
 
-##References
+## References
 This article was written for Typescript 4.x and Babel 7.x. Here are some links you can check for further reading:
 1. [Babel documentation](https://babeljs.io/docs/en/)
 2. [Typescript documentation](https://www.typescriptlang.org/docs/) 
