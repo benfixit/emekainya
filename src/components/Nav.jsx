@@ -10,7 +10,7 @@ const Nav = () => {
                 <span className="title">Software Engineer</span>
             </h1>
             <ul>
-                <NavLink to={"/blog"}>Blog</NavLink>
+                <a href="https://blog.emekainya.com" target="blank">Blog</a>
                 <NavLink to={"/projects"}>Projects</NavLink>
                 <NavLink to={"/resume"}>Resume</NavLink>
             </ul>

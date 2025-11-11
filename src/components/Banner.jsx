@@ -1,10 +1,10 @@
-import Thumbnail from "../assets/chukwuemeka.jpeg";
+import Thumbnail from "../assets/emeka.png";
 import "./Banner.css";
 
 const Banner = () => {
     return (
         <section>
-            <img src={Thumbnail} alt="Chukwuemeka Inya" />
+            <img src={Thumbnail} alt="Chukwuemeka Inya" width="300" height="350" />
             <div>
                 <h1>Chukwuemeka Inya</h1>
                 <p>

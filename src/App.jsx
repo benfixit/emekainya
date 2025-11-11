@@ -15,10 +15,6 @@ function App() {
             <Route index element={<Home />}></Route>
             <Route path="projects" element={<Projects />}></Route>
             <Route path="resume" element={<Resume />}></Route>
-            <Route path="blog">
-              <Route index element={<Blog />}></Route>
-              <Route path=":slug" element={<BlogPost />}></Route>
-            </Route>
           </Route>
         </Routes>
       </BrowserRouter>
