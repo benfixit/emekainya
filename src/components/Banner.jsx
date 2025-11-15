@@ -1,4 +1,4 @@
-import Thumbnail from "../assets/emeka.png";
+import Thumbnail from "../assets/chukwuemeka.jpeg";
 import "./Banner.css";
 
 const Banner = () => {
