@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node build.cjs && vite",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@benfixit/kedu": "^1.0.0",
     "frontmatter": "^0.0.3",
     "gray-matter": "^4.0.3",
     "react": "^19.1.1",
