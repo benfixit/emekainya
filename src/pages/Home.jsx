@@ -21,7 +21,7 @@ const Home = () => {
                             I have proven expertise in architecting complex systems, optimizing data structures and algorithms, and driving engineering excellence as an active StackOverflow contributor.
                         </p>
                         <p>
-                            Over the past 9 years, I've shipped products across <strong>finance</strong>, <strong>real estate</strong>, and <strong>logistics</strong>, working with technologies like PHP (Laravel, Symfony), JavaScript (React, Node.js), MySQL, Docker, Redis, and Kubernetes.
+                            Over the past 9 years, I've shipped products across <strong>finance</strong>, <strong>real estate</strong>, and <strong>logistics</strong>, working with technologies like Python, PHP (Laravel, Symfony), JavaScript (TypeScript, React, Node.js), MySQL, Docker, Redis, and Kubernetes.
                         </p>
                         <ul>
                             <a href="https://github.com/benfixit" target="_blank"><FaGithub /> &nbsp; Github</a>
