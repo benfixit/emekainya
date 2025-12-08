@@ -150,3 +150,10 @@
         }
     }
 }
+
+@media (min-width: 1920px) {
+    .main {
+        padding: 0 480px;
+    }
+
+}
