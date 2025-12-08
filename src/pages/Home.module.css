@@ -76,12 +76,15 @@
             }
 
             div {
-                button {
+                a {
                     background-color: black;
                     border-radius: 8px;
                     border: none;
+                    font-size: 16px;
                     padding: 24px;
-                    width: 100%;
+                    display: block;
+                    color: #ffffff;
+                    text-align: center;
                 }
             }
         }
@@ -129,6 +132,16 @@
                     justify-content: flex-start;
                     column-gap: 12px;
 
+                    a {
+                        width: 25%;
+
+                        &:last-child {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                div {
                     a {
                         width: 30%;
                     }

@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6"
+import { FaGithub, FaLinkedin, FaTwitter, FaDownload } from "react-icons/fa6"
 import Thumbnail from "../assets/chukwuemeka.png";
 import styles from "./Home.module.css"
 
@@ -27,9 +27,10 @@ const Home = () => {
                             <a href="https://github.com/benfixit" target="_blank"><FaGithub /> &nbsp; Github</a>
                             <a href="https://www.linkedin.com/in/chukwuemeka-inya" target="_blank"><FaLinkedin /> &nbsp; Linkedin</a>
                             <a href="https://x.com/inyaemeka" target="_blank"><FaTwitter /> &nbsp; Twitter</a>
+                            <a href="resume.pdf" download={"chukwuemeka"}><FaDownload /> &nbsp; Resume</a>
                         </ul>
                         <div>
-                            <button>Let's work together</button>
+                            <a href="mailto:inyachukwuemeka1@gmail.com">Let's work together</a>
                         </div>
                     </div>
                 </section>
