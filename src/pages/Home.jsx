@@ -1,10 +1,46 @@
-import Banner from "../components/Banner";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6"
+import Thumbnail from "../assets/chukwuemeka.png";
+import styles from "./Home.module.css"
 
 const Home = () => {
     return (
-        <>
-            <Banner />
-        </>
+        <main className={styles.main}>
+            <nav className={styles.nav}>
+                <h1>CI</h1>
+                <a href="https://blog.emekainya.com" target="blank">Blog</a>
+            </nav>
+            <section className={styles.wrapper}>
+                <h1>Hey, I'm Chuks.</h1>
+                <section>
+                    <img src={Thumbnail} alt="Chukwuemeka Inya" />
+                    <div>
+                        <p>
+                            A software engineer specializing in building and scaling robust enterprise and web applications.
+                        </p>
+                        <p>
+                            I have proven expertise in architecting complex systems, optimizing data structures and algorithms, and driving engineering excellence as an active StackOverflow contributor.
+                        </p>
+                        <p>
+                            Over the past 9 years, I've shipped products across <strong>finance</strong>, <strong>real estate</strong>, and <strong>logistics</strong>, working with technologies like PHP (Laravel, Symfony), JavaScript (React, Node.js), MySQL, Docker, Redis, and Kubernetes.
+                        </p>
+                        <ul>
+                            <a href="https://github.com/benfixit" target="_blank"><FaGithub /> &nbsp; Github</a>
+                            <a href="https://www.linkedin.com/in/chukwuemeka-inya" target="_blank"><FaLinkedin /> &nbsp; Linkedin</a>
+                            <a href="https://x.com/inyaemeka" target="_blank"><FaTwitter /> &nbsp; Twitter</a>
+                        </ul>
+                        <div>
+                            <button>Let's work together</button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <footer className={styles.footer}>
+                <p>Built with ❤️</p>
+                <span>
+                    &copy; 2025.
+                </span>
+            </footer>
+        </main>
     );
 }
 
