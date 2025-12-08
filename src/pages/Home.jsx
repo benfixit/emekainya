@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaDownload } from "react-icons/fa6"
-import Thumbnail from "../assets/chukwuemeka.png";
 import styles from "./Home.module.css"
 
 const Home = () => {
@@ -12,7 +11,7 @@ const Home = () => {
             <section className={styles.wrapper}>
                 <h1>Hey, I'm Chuks.</h1>
                 <section>
-                    <img src={Thumbnail} alt="Chukwuemeka Inya" />
+                    <div></div>
                     <div>
                         <p>
                             A software engineer specializing in building and scaling robust enterprise and web applications.
