@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import styles from "./Nav.module.css";
 
 const Nav = () => {
@@ -7,7 +8,7 @@ const Nav = () => {
                 <a href="/">CI</a>
             </h1>
             <ul>
-                <a href="/projects">Projects</a>
+                <NavLink to={"/projects"}>Projects</NavLink>
                 <a href="https://blog.emekainya.com" target="blank">Blog</a>
             </ul>
         </nav>

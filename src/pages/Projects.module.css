@@ -13,7 +13,7 @@
         p {
             padding: 16px 0 32px;
             margin-bottom: 8px;
-            border-bottom: thin solid #0f0f0f;
+            border-bottom: thin solid #cccccc;
         }
 
         span {
@@ -26,6 +26,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+
+                &:hover {
+                    color: #555555;
+                }
             }
         }
     }
