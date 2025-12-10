@@ -1,193 +1,52 @@
-.main {
-    padding: 0 48px;
-    min-height: 100vh;
-    background-color: #ffffff;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: thin solid black;
-    width: 100%;
-    padding: 36px 0;
-    position: sticky;
-    top: 0;
-    background-color: #ffffff;
-
-    h1 {
-        a {
-            font-size: 36px;
-            font-weight: bold;
-            background-color: #efefef;
-            padding: 4px 16px;
-            border-radius: 8px;
-        }
-    }
-
-    ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        column-gap: 48px;
-
-        a:first-child {
-            &:hover {
-                color: #555555;
-            }
-        }
-
-        a:last-child {
-            background-color: #efefef;
-            border: thin solid #0f0f0f;
-            border-radius: 4px;
-            padding: 4px 12px;
-
-            &:hover {
-                background-color: #dfdfdf;
-            }
-        }
-    }
-}
-
 .wrapper {
-    padding: 36px 0 48px;
-
-    h1 {
-        font-size: 36px;
-        margin-bottom: 36px;
-    }
-
-    section {
-        div:first-child {
-            border: thin solid #0f0f0f;
-            border-radius: 10px;
-            margin-bottom: 36px;
-            height: 350px;
-            background-image: url("/chukwuemeka.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        div:nth-child(2) {
-            p {
-                font-size: 16px;
-                margin-bottom: 36px;
-
-                &:first-child {
-                    font-weight: 500;
-                }
-            }
-
-            ul {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                row-gap: 12px;
-                margin-bottom: 36px;
-
-                a {
-                    border: thin solid #0f0f0f;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 8px;
-                    border-radius: 8px;
-
-                    &:hover {
-                        background-color: #dfdfdf;
-                    }
-                }
-            }
-
-            div {
-                a {
-                    background-color: black;
-                    border-radius: 8px;
-                    border: none;
-                    font-size: 16px;
-                    padding: 24px;
-                    display: block;
-                    color: #ffffff;
-                    text-align: center;
-
-                    &:hover {
-                        background-color: #ffffff;
-                        color: #0f0f0f;
-                        border: thin solid #0f0f0f;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.footer {
-    flex: 1;
     display: flex;
-    justify-content: space-between;
-    border-top: thin solid #0f0f0f;
-    padding: 40px 0;
-}
+    flex-direction: column;
+    gap: 28px;
+    padding: 36px 0;
 
+    div {
+        border: thin solid #0f0f0f;
+        border-radius: 8px;
+        padding: 36px;
+        flex: 1;
+
+        p {
+            padding: 16px 0 32px;
+            margin-bottom: 8px;
+            border-bottom: thin solid #0f0f0f;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            column-gap: 48px;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
 
 @media (min-width: 768px) {
     .wrapper {
-        h1 {
-            font-size: 48px;
-        }
+        flex-direction: row;
+        flex-wrap: wrap;
 
-        section {
-            display: flex;
-            flex-direction: row-reverse;
-            column-gap: 40px;
-            
-            div:first-child {
-                width: 100%;
-            }
-
-            div:nth-child(2) {
-                p {
-                    &:first-child {
-                        font-size: 24px;
-                    }
-                }
-
-                ul {
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    column-gap: 12px;
-                    flex-wrap: wrap;
-
-                    a {
-                        width: 20%;
-
-                        &:last-child {
-                            cursor: pointer;
-                        }
-                    }
-                }
-
-                div {
-                    a {
-                        width: 30%;
-                    }
-                }
-            }
+        div {
+            flex-grow: unset;
+            flex-basis: calc(50% - 90px);
         }
     }
 }
 
-@media (min-width: 1440px) {
-    .main {
-        padding: 0 200px;
+@media (min-width: 768px) {
+    .wrapper {
+        div {
+            flex-basis: calc(33% - 90px);
+        }
     }
-}
-
-@media (min-width: 1920px) {
-    .main {
-        padding: 0 480px;
-    }
-
 }

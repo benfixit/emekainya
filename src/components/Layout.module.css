@@ -1,0 +1,18 @@
+.main {
+    padding: 0 48px;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+@media (min-width: 1440px) {
+    .main {
+        padding: 0 200px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .main {
+        padding: 0 480px;
+    }
+
+}
