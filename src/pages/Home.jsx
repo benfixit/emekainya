@@ -5,8 +5,13 @@ const Home = () => {
     return (
         <main className={styles.main}>
             <nav className={styles.nav}>
-                <h1>CI</h1>
-                <a href="https://blog.emekainya.com" target="blank">Blog</a>
+                <h1>
+                    <a href="/">CI</a>
+                </h1>
+                <ul>
+                    <a href="/projects">Projects</a>
+                    <a href="https://blog.emekainya.com" target="blank">Blog</a>
+                </ul>
             </nav>
             <section className={styles.wrapper}>
                 <h1>Hey, I'm Chuks.</h1>
