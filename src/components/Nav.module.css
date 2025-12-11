@@ -23,7 +23,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        column-gap: 48px;
+        column-gap: 12px;
 
         a:first-child {
             &:hover {
@@ -39,6 +39,14 @@
             &:hover {
                 background-color: #dfdfdf;
             }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .nav {
+        ul {
+            column-gap: 48px;
         }
     }
 }

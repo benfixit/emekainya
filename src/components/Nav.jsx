@@ -9,7 +9,7 @@ const Nav = () => {
             </h1>
             <ul>
                 <NavLink to={"/projects"}>Projects</NavLink>
-                <a href="https://blog.emekainya.com" target="blank">Blog</a>
+                <a href="https://blog.emekainya.com" target="_blank">Blog</a>
             </ul>
         </nav>
     );
