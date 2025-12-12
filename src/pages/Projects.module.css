@@ -1,7 +1,11 @@
+:root {
+    --column-gap: 28px;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: var(--column-gap);
     padding: 36px 0;
 
     div {
@@ -41,16 +45,7 @@
         flex-wrap: wrap;
 
         div {
-            flex-grow: unset;
-            flex-basis: calc(50% - 90px);
-        }
-    }
-}
-
-@media (min-width: 1024px) {
-    .wrapper {
-        div {
-            flex-basis: calc(33% - 90px);
+            flex-basis: calc((100% - (2 * var(--column-gap))) / 4);
         }
     }
 }
