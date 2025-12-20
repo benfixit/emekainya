@@ -1,4 +1,5 @@
-import styles from "./hymnbook.module.css";
+//@ts-ignore
+import styles from "./CatholicHymnbook.module.css";
 
 const CatholicHymnbook = () => {
     return (

@@ -1,0 +1,56 @@
+:root {
+    --column-gap: 28px;
+    --secondary-background-color: #efefef;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--column-gap);
+    padding: 36px 0;
+    min-height: calc(100vh - 80px);
+
+    > div:first-of-type {
+        display: flex;
+
+        button {
+            flex: 1;
+            background: transparent;
+            color: var(--color);
+            padding: 16px 0;
+        }
+    }
+
+    div:last-of-type {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        div {
+            flex-basis: calc((100% - (2 * var(--column-gap))) / 4);
+        }
+    }
+}
+
+.active_button {
+    border: none;
+    background-color: var(--secondary-background-color);
+    border-bottom: thin solid #0f0f0f;
+}
+
+.inactive_button {
+    border: none;
+    background-color: inherit;
+}
