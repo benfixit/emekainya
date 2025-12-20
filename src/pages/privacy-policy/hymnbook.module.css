@@ -1,0 +1,18 @@
+.wrapper {
+    padding: 36px 0 48px;
+    min-height: calc(100vh - 300px);
+
+    h2 {
+        margin-bottom: 36px;
+    }
+
+    div {
+        a {
+            color: #3872E0;
+
+            &:hover {
+                color: #990000;
+            }
+        }
+    }
+}
